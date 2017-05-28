@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <com.example.info3.CameraSurfaceView
+        android:id="@+id/cameraSurfaceView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <com.example.info3.DrawSurfaceView
+        android:id="@+id/drawSurfaceView"
+        android:onClick="onClick"
+        android:editable = "true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
+
+    <LinearLayout android:id="@+id/linearLayout1"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+
+        android:gravity="center|bottom"
+        android:orientation="vertical"
+        android:layout_width="match_parent">
+
+    </LinearLayout>
+
+    <Button
+        android:text="MAP"
+        android:id="@+id/button1"
+        android:layout_gravity="center_horizontal|center"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_states"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="23dp">
+    </Button>
+
+</RelativeLayout>
+</FrameLayout>
