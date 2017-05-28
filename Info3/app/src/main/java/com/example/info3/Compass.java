@@ -17,7 +17,7 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 
 public class Compass extends Activity implements SensorEventListener, LocationListener{
@@ -33,7 +33,7 @@ public class Compass extends Activity implements SensorEventListener, LocationLi
     private float[] mValues = new float[3];
     private View t;
 
-    Button button;
+    ImageButton button;
 
     @Override
     protected void onCreate(Bundle icicle) {
@@ -43,14 +43,14 @@ public class Compass extends Activity implements SensorEventListener, LocationLi
         setContentView(R.layout.activity_compass);
 
 
-        button = (Button)findViewById(R.id.button1);
+        button = (ImageButton)findViewById(R.id.imageButton);
 
         mDrawView = (DrawSurfaceView) findViewById(R.id.drawSurfaceView);
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 switch (view.getId()) {
-                    case R.id.button1:
+                    case R.id.imageButton:
                         Intent i = new Intent(Compass.this, MapsActivity.class);
                         startActivity(i);
                         break;

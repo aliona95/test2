@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
@@ -57,6 +58,14 @@ public class HomeActivity extends AppCompatActivity implements
     Button shoe_store;
 
 
+
+
+    ImageButton buttonAuth;
+
+
+
+
+
     public static String selection;
 
     protected GoogleApiClient mGoogleApiClient;
@@ -97,6 +106,8 @@ public class HomeActivity extends AppCompatActivity implements
         placesList = new ArrayList<>();
 
 
+        buttonAuth = (ImageButton) findViewById(R.id.imageButton5);
+
         button6 = (Button) findViewById(R.id.button6);
         //button26 = (Button) findViewById(R.id.button26);
         cafe = (Button) findViewById(R.id.button4);
@@ -123,6 +134,13 @@ public class HomeActivity extends AppCompatActivity implements
             @Override
             public void onClick(View view) {
                 switch (view.getId()) {
+                    case R.id.imageButton5:
+                        Toast.makeText(HomeActivity.this, "PASPAUSTA", Toast.LENGTH_LONG).show();
+
+                        Intent i0 = new Intent(HomeActivity.this, Compass.class);
+                        startActivity(i0);
+                        break;
+
                     case R.id.button6:      // restoranai
                         /*selection = "restaurant";
                         //PropsData.getData();
@@ -364,8 +382,8 @@ public class HomeActivity extends AppCompatActivity implements
                             startActivity(i9);
                         } else {
                             Toast.makeText(HomeActivity.this, "Nėra duomenų", Toast.LENGTH_LONG).show();
-                            Intent ii = new Intent(HomeActivity.this, ShakeActivity.class);
-                            startActivity(ii);
+                            //Intent ii = new Intent(HomeActivity.this, ShakeActivity.class);
+                            //startActivity(ii);
                         }
                         break;
                     case R.id.button17:      // bankomatai
@@ -614,6 +632,7 @@ public class HomeActivity extends AppCompatActivity implements
             }
         };
 
+        buttonAuth.setOnClickListener(onClickListener);
         button6.setOnClickListener(onClickListener);
         //button26.setOnClickListener(onClickListener);
         bar.setOnClickListener(onClickListener);
