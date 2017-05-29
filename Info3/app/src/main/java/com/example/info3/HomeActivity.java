@@ -94,7 +94,6 @@ public class HomeActivity extends AppCompatActivity implements
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         mLatitudeLabel = getResources().getString(R.string.latitude_label);

@@ -3,6 +3,7 @@ package com.example.info3;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -12,7 +13,7 @@ import android.widget.ImageButton;
 
 
 public class SettingsActivity extends AppCompatActivity {
-
+    static String userName;
     ImageButton buttonBack;
     Button buttonOk;
     EditText editText;
@@ -24,13 +25,14 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-
+        final SharedPreferences  preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
         android.app.Fragment fragment = new SettingsScreen();
         android.app.FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         if(savedInstanceState == null){
             Log.i("TAG", "A2");
             fragmentTransaction.add(R.id.relative_layout, fragment, "settings_fragment");
+
             fragmentTransaction.commit();
            /* SharedPreferences  preferences = PreferenceManager.getDefaultSharedPreferences(this);
             String username = preferences.getString("editTextField", "default_value");
@@ -51,13 +53,15 @@ public class SettingsActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+                // gaunamas atstumas
 
+                userName = preferences.getString("editTextField", "default_value");
+                HomeActivity.PROXIMITY_RADIUS = Integer.parseInt(userName);
+                Log.i("TAG BACK", userName);
                 switch (view.getId()) {
                     case R.id.imageButton7:
                         // grizimas atgal i pradini langa
-
-
-
+                        Log.i("BACK", userName);
                         finish();
                         break;
                 }
@@ -78,12 +82,13 @@ public class SettingsActivity extends AppCompatActivity {
             Log.i("TAG", "A1");
 
 
-/*
-            SharedPreferences  preferences = PreferenceManager.getDefaultSharedPreferences(this.getActivity());
-            String username = preferences.getString("editTextField", "default_value");
-            Log.i("TAG", username);
+            /*SharedPreferences  preferences = PreferenceManager.getDefaultSharedPreferences(this.getActivity());
+            userName = preferences.getString("editTextField", "default_value");
+            Log.i("TAG", userName);*/
+           // String username = preferences.getString("editTextField", "default_value");
+            //Log.i("TAG", username);
 
-*/
+
 
         }
 
