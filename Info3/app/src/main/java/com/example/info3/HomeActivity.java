@@ -61,7 +61,7 @@ public class HomeActivity extends AppCompatActivity implements
 
 
     ImageButton buttonAuth;
-
+    ImageButton buttonSettings;
 
 
 
@@ -83,7 +83,7 @@ public class HomeActivity extends AppCompatActivity implements
     public static String stringLastLongitude;
 
     ArrayList<HashMap<String, String>> placesList;
-    private static int PROXIMITY_RADIUS = 10000/*1000*//*800*/;
+    public static int PROXIMITY_RADIUS = 10000/*1000*//*800*/;
     public static String url;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -107,6 +107,7 @@ public class HomeActivity extends AppCompatActivity implements
 
 
         buttonAuth = (ImageButton) findViewById(R.id.imageButton5);
+        buttonSettings = (ImageButton) findViewById(R.id.imageButton6);
 
         button6 = (Button) findViewById(R.id.button6);
         //button26 = (Button) findViewById(R.id.button26);
@@ -139,6 +140,12 @@ public class HomeActivity extends AppCompatActivity implements
 
                         Intent i0 = new Intent(HomeActivity.this, Compass.class);
                         startActivity(i0);
+                        break;
+                    case R.id.imageButton6:
+                        //Toast.makeText(HomeActivity.this, "PASPAUSTA", Toast.LENGTH_LONG).show();
+
+                        Intent i00 = new Intent(HomeActivity.this, SettingsActivity.class);
+                        startActivity(i00);
                         break;
 
                     case R.id.button6:      // restoranai
@@ -633,6 +640,7 @@ public class HomeActivity extends AppCompatActivity implements
         };
 
         buttonAuth.setOnClickListener(onClickListener);
+        buttonSettings.setOnClickListener(onClickListener);
         button6.setOnClickListener(onClickListener);
         //button26.setOnClickListener(onClickListener);
         bar.setOnClickListener(onClickListener);
