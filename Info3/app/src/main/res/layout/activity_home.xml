@@ -50,7 +50,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Title"
+            android:text="Demo"
             android:layout_gravity="left"
             android:gravity="left"
             android:textSize="24dp"
@@ -71,17 +71,7 @@
                 android:background="?attr/colorPrimary"
                 android:id="@+id/imageButton6"
                 />
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:layout_gravity="right"
-                app:srcCompat="@drawable/ic_person_black_24dp"
-                android:id="@+id/imageButton5"
-                android:layout_alignParentRight="true"
-                android:background="?attr/colorPrimary"
-                android:layout_marginRight="16dp" />
-       <!-- </RelativeLayout>-->
+        <!-- </RelativeLayout>-->
 
     </android.support.v7.widget.Toolbar>
 

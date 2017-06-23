@@ -60,7 +60,7 @@ public class HomeActivity extends AppCompatActivity implements
 
 
 
-    ImageButton buttonAuth;
+    //ImageButton buttonAuth;
     ImageButton buttonSettings;
 
 
@@ -105,7 +105,7 @@ public class HomeActivity extends AppCompatActivity implements
         placesList = new ArrayList<>();
 
 
-        buttonAuth = (ImageButton) findViewById(R.id.imageButton5);
+        //buttonAuth = (ImageButton) findViewById(R.id.imageButton5);
         buttonSettings = (ImageButton) findViewById(R.id.imageButton6);
 
         button6 = (Button) findViewById(R.id.button6);
@@ -134,12 +134,12 @@ public class HomeActivity extends AppCompatActivity implements
             @Override
             public void onClick(View view) {
                 switch (view.getId()) {
-                    case R.id.imageButton5:
+                    /*case R.id.imageButton5:
                         Toast.makeText(HomeActivity.this, "PASPAUSTA", Toast.LENGTH_LONG).show();
 
                         Intent i0 = new Intent(HomeActivity.this, Compass.class);
                         startActivity(i0);
-                        break;
+                        break;*/
                     case R.id.imageButton6:
                         //Toast.makeText(HomeActivity.this, "PASPAUSTA", Toast.LENGTH_LONG).show();
 
@@ -638,7 +638,7 @@ public class HomeActivity extends AppCompatActivity implements
             }
         };
 
-        buttonAuth.setOnClickListener(onClickListener);
+        //buttonAuth.setOnClickListener(onClickListener);
         buttonSettings.setOnClickListener(onClickListener);
         button6.setOnClickListener(onClickListener);
         //button26.setOnClickListener(onClickListener);

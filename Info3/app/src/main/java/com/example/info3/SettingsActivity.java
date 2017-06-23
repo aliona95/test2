@@ -24,16 +24,25 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-
+        //Log.i("TAG", "A0");
         final SharedPreferences  preferences = PreferenceManager.getDefaultSharedPreferences(this);
-
+        //Log.i("TAG", "A1");
         android.app.Fragment fragment = new SettingsScreen();
         android.app.FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         if(savedInstanceState == null){
             Log.i("TAG", "A2");
             fragmentTransaction.add(R.id.relative_layout, fragment, "settings_fragment");
-
             fragmentTransaction.commit();
+
+
+
+
+
+
+
+
+
+
            /* SharedPreferences  preferences = PreferenceManager.getDefaultSharedPreferences(this);
             String username = preferences.getString("editTextField", "default_value");
             Log.i("TAG is activity", username);*/
@@ -43,12 +52,6 @@ public class SettingsActivity extends AppCompatActivity {
         }
 
         buttonBack = (ImageButton) findViewById(R.id.imageButton7);
-
-
-
-
-
-
         View.OnClickListener onClickListener = new View.OnClickListener() {
 
             @Override
@@ -78,17 +81,11 @@ public class SettingsActivity extends AppCompatActivity {
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
+            // nustatymuose langai atstumas ir shake
             addPreferencesFromResource(R.xml.settings_screen);
+            addPreferencesFromResource(R.xml.settings_screen_shake);
+
             Log.i("TAG", "A1");
-
-
-            /*SharedPreferences  preferences = PreferenceManager.getDefaultSharedPreferences(this.getActivity());
-            userName = preferences.getString("editTextField", "default_value");
-            Log.i("TAG", userName);*/
-           // String username = preferences.getString("editTextField", "default_value");
-            //Log.i("TAG", username);
-
-
 
         }
 

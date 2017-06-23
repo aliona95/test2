@@ -39,53 +39,7 @@
 
         </android.support.v7.widget.Toolbar>
 
-        <include layout="@layout/content_main"/>
-    <!--<RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/bg2">
-
-        <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text=""
-                android:textColor="@color/cardview_light_background"
-                android:ems="10"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginLeft="57dp"
-                android:layout_marginStart="57dp"
-                android:layout_marginTop="103dp"
-                android:id="@+id/editText" />
-
-        <Button
-            android:text="Ok"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="85dp"
-            android:layout_marginEnd="85dp"
-            android:layout_marginBottom="123dp"
-            android:id="@+id/button2" />
-
-        <TextView
-            android:text="Atstumas (metrais)"
-            android:textSize="20dp"
-            android:textColor="@color/cardview_light_background"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignLeft="@+id/editText"
-            android:layout_alignStart="@+id/editText"
-            android:layout_marginTop="53dp"
-            android:id="@+id/textView7" />
-
-    </RelativeLayout>
--->
+        <include layout="@layout/content_main_obj_distance"/>
 
 </LinearLayout>
 
