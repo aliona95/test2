@@ -148,10 +148,9 @@ public abstract class ShakeDetector implements SensorEventListener {
         moveCount = 0;
     }
 
-
-
     // (I'd normally put this definition in it's own .java file)
     public interface OnShakeListener {
         public void onShake();
     }
+
 }
